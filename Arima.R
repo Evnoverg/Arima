@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 library(patchwork)
 
-file <- "~/archive_indices_2025-01-01-2026-05-25(1).xml"
+file <- "~/archive_indices_2025-01-01-2026-05-25.xml"
 doc <- xmlParse(file)
 rows <- getNodeSet(doc, "//row")
 df_list <- lapply(rows, function(x) as.list(xmlAttrs(x)))
